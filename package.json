@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "git@github.com:nulab/nu-cookie-banner.git",
   "author": "davicho <david@nulab.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "js-cookie": "^2.2.1"
+  }
 }
