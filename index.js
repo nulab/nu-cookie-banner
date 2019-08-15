@@ -1,1 +1,3 @@
-console.log("test");
+module.exports = (str) => {
+   return `💩${str}💩`;
+}
