@@ -1,3 +1,4 @@
-{
-  "en": "english"
+module.exports = {
+  en: "Nulab uses cookies to deliver our services. By visiting our website, you agree to the use of cookies as described in our <a href='https://nulab.com/privacy/cookie-policy/''>Cookie Policy</a>.",
+  ja: "ヌーラボはクッキーを使ってサービスを提供しています。当社のウェブサイトにアクセスすることにより、 <a href='https://nulab.com/ja/privacy/cookie-policy/''>Cookieポリシー</a>  に記載されているCookieの使用に同意するものとします。"
 }
