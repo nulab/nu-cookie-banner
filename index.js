@@ -1,5 +1,3 @@
-console.log("...in index.js of nu-cookie-banner");
-
 // require js-cookie
 // https://github.com/js-cookie/js-cookie
 const Cookies = require('js-cookie');
@@ -20,11 +18,6 @@ function cookieCheck() {
   }
 }
 
-// Get LANG cookie if set
-function getLanguageCookie(cookieLanguageKey) {
-  language = Cookies.get(cookieLanguageKey);
-} 
-
 // Get CONSENT cookie if set
 function getCookie() {
   agree = Cookies.get('cookiePolicy');
@@ -33,20 +26,17 @@ function getCookie() {
 
 // Set cookie
 function setCookie() {
-  console.log("...setting cookie");
   Cookies.set('cookiePolicy', 'agree', { expires: 90 });
 }
 
 // Enable alert (display)
 function enableAlert() {
-  console.log("in enableAlert");
-  cookieAlertContainer.style.display='flex';
+  cookieAlertContainer.classList.toggle("-visible");
 }
 
 // Disable alert
 function disableAlert() {
-  console.log("in disableAlert");
-  cookieAlertContainer.style.display='none';
+  cookieAlertContainer.remove();
 }
 
 // Alert show/hide
@@ -59,7 +49,6 @@ function toggleAlert() {
 }
 
 document.addEventListener('click', function (event) {
-  console.log(event.target);
   // If the clicked element doesn't have the right selector, bail
   if (!event.target.closest('.nu-cookies-alert-box__button')) return;
 
@@ -67,19 +56,17 @@ document.addEventListener('click', function (event) {
   event.preventDefault();
 
   // Log the clicked element in the console
-  console.log(event.target);
-  //let testt = "here";
   setCookie();
   toggleAlert();
 
 }, false);
 
+// export render function to display 'nu cookie banner'
 module.exports.render = function(cookieLanguageKey) {
-  console.log("...in module.exports.render");
   
-  // get site cookie key for language if set
+  // Get 'LANG' cookie if set (otherwise, default = 'en')
   if (Cookies.get(cookieLanguageKey)) {
-    getLanguageCookie(cookieLanguageKey);
+    language = Cookies.get(cookieLanguageKey);
   }
  
   let markup = `
