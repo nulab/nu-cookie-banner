@@ -2,7 +2,6 @@ import Cookies from 'js-cookie'
 
 // Get LANG cookie (if it's set)
 export function getLanguageCookie(cookieLanguageKey) {
-  console.log(Cookies.get(cookieLanguageKey));
   return Cookies.get(cookieLanguageKey)
 }
 
