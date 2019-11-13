@@ -33,7 +33,8 @@ document.addEventListener(
   false,
 )
 
-module.exports.render = function(cookieLanguageKey) {
+export default function (company, cookieLanguageKey) {
+
   // If user already agreed, do nothing.
   if (userHasAgreed()) {
     return
@@ -52,7 +53,7 @@ module.exports.render = function(cookieLanguageKey) {
   // Create element
   const cookieAlertContainer = document.createElement('div')
   cookieAlertContainer.className = cookieAlertClass
-  cookieAlertContainer.innerHTML = markup(languageData[language])
+  cookieAlertContainer.innerHTML = markup(company, languageData[language])
 
   // Add element to page
   document.body.appendChild(cookieAlertContainer)
