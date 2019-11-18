@@ -1,6 +1,6 @@
 {
   "name": "nu-cookie-banner",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "nulab cookie banner package",
   "main": "index.js",
   "repository": "git@github.com:nulab/nu-cookie-banner.git",
