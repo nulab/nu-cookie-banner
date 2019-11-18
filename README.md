@@ -29,7 +29,7 @@ import nuCookie from 'nu-cookie-banner';
 
 ### Initializing
 
-Initialization depends on a language cookie key set by the site. Defaults to English.
+Initialization depends on company name and a language cookie key set by the site. Defaults to English.
 ```
-nuCookie.render('lang');
+nuCookie.render('company', 'lang');
 ```
