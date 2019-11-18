@@ -1,6 +1,7 @@
 .nu-cookies-alert {
   &-container {
     display: flex;
+    z-index: 3147483000;
     width: 100%;
     position: fixed;
     bottom: 0;
