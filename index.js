@@ -4,7 +4,6 @@
 import Cookies from 'js-cookie'
 import {
   userHasAgreed,
-  getLanguageCookie,
   setCookie,
   markup,
 } from './src/utils'
@@ -33,8 +32,7 @@ document.addEventListener(
   false,
 )
 
-export default function (company, cookieLanguageKey) {
-
+export default function (company, cookieLanguage) {
   // If user already agreed, do nothing.
   if (userHasAgreed()) {
     return
@@ -43,11 +41,10 @@ export default function (company, cookieLanguageKey) {
   // Otherwise, continue to render and create cookie alert banner
 
   // Set default language
-  let language = 'en'
+  let language = cookieLanguage
 
-  // Get site cookie key for language if set
-  if (Cookies.get(cookieLanguageKey)) {
-    language = getLanguageCookie(cookieLanguageKey)
+  if (language === 'en-US') {
+    language = 'en'
   }
 
   // Create element

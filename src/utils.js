@@ -1,10 +1,5 @@
 import Cookies from 'js-cookie'
 
-// Get LANG cookie (if it's set)
-export function getLanguageCookie(cookieLanguageKey) {
-  return Cookies.get(cookieLanguageKey)
-}
-
 // Get CONSENT cookie if set
 export function getCookie() {
   return Cookies.get('cookiePolicy')
