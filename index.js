@@ -32,7 +32,7 @@ document.addEventListener(
   false,
 )
 
-export default function (company, cookieLanguageKey) {
+export default function (company, cookieLanguage) {
   // If user already agreed, do nothing.
   if (userHasAgreed()) {
     return
@@ -41,7 +41,7 @@ export default function (company, cookieLanguageKey) {
   // Otherwise, continue to render and create cookie alert banner
 
   // Set default language
-  let language = cookieLanguageKey
+  let language = cookieLanguage
 
   if (language === 'en-US') {
     language = 'en'
