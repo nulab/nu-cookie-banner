@@ -31,5 +31,5 @@ import nuCookie from 'nu-cookie-banner';
 
 Initialization depends on company name and a language cookie key set by the site. Defaults to English.
 ```
-nuCookie.render('company', 'lang');
+nuCookie('company', 'lang');
 ```
