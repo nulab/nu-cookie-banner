@@ -2,7 +2,11 @@
   "name": "nu-cookie-banner",
   "version": "3.0.1",
   "description": "nulab cookie banner package",
-  "main": "index.js",
+  "main": "lib",
+  "scripts": {
+    "build": "babel src -d lib",
+    "prepublish": "npm run build"
+  },
   "repository": "git@github.com:nulab/nu-cookie-banner.git",
   "author": "davicho <david@nulab.com>",
   "license": "MIT",
@@ -10,9 +14,8 @@
     "js-cookie": "^2.2.1"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^6.2.8",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-es2015": "^6.24.1"
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3"
   }
 }
