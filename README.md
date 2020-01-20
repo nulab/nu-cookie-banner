@@ -19,17 +19,30 @@ Must have Webpack to build to css
 ```
 @import '~nu-cookie-banner/src/nu-cookie-banner.scss';
 ```
+OR 
 
-#### Import or require the package in your .js file
-
-Using `nuCookie` as an example.
+use build css
 ```
-import nuCookie from 'nu-cookie-banner';
+nu-cookie-banner/dist/nu-cookie-banner.css';
 ```
 
-### Initializing
+#### Import the package in your .js file
 
-Initialization depends on company name and a language cookie key set by the site. Defaults to English.
 ```
-nuCookie.render('company', 'lang');
+import { renderNuCookieBanner } from 'nu-cookie-banner'
 ```
+```
+renderNuCookieBanner('company', 'lang');
+```
+
+OR 
+
+#### Require the package in your .js file
+```
+let nuCookieBannerReq = require('nu-cookie-banner')
+```
+```
+nuCookieBannerReq.renderNuCookieBanner('company', 'lang')
+```
+
+## If all else fails due to local incompatible environments/builds use the `dist/nuCookieBanner.js` and `dist/nu-cookie-banner.css` builds instead (for example: `dist/sample-script.html`).

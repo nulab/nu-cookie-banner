@@ -1,13 +1,14 @@
+//import './nu-cookie-banner.scss'
+
 // require js-cookie
 // https://github.com/js-cookie/js-cookie
-
 import Cookies from 'js-cookie'
 import {
   userHasAgreed,
   setCookie,
   markup,
-} from './src/utils'
-import languageData from './src/i18n/languages'
+} from './utils'
+import languageData from './languages'
 
 let cookieAlertClass = 'nu-cookies-alert-container'
 
@@ -32,7 +33,7 @@ document.addEventListener(
   false,
 )
 
-export default function (company, cookieLanguage) {
+export function renderNuCookieBanner(company, cookieLanguage) {
   // If user already agreed, do nothing.
   if (userHasAgreed()) {
     return
