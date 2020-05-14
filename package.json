@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack --mode development",
-    "build": "webpack --config config/webpack.prod.js",
+    "build": "webpack --config config/webpack.prod.config.js",
     "start": "webpack-dev-server --open --config config/webpack.dev.config.js"
   },
   "dependencies": {

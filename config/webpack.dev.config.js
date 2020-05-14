@@ -3,4 +3,7 @@ const webpackBaseConfig = require('./webpack.common.config.js')
 
 module.exports = merge(webpackBaseConfig, {
   mode: 'development',
+  devServer: {
+    contentBase: './dist',
+  },
 })

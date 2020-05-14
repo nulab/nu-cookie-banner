@@ -1,6 +1,6 @@
 export default {
   en:
-    "asdfasuses cookies to deliver our services. By visiting our website, you agree to the use of cookies as described in our <a href='https://nulab.com/privacy/cookie-policy/' target='_blank'>Cookie Policy</a>.",
+    "uses cookies to deliver our services. By visiting our website, you agree to the use of cookies as described in our <a href='https://nulab.com/privacy/cookie-policy/' target='_blank'>Cookie Policy</a>.",
   ja:
     "当社はクッキーを使ってサービスを提供しています。当社のウェブサイトにアクセスすることにより、<a href='https://nulab.com/ja/privacy/cookie-policy/' target='_blank'>クッキーポリシー</a> に記載されているクッキーの使用に同意するものとします。",
   es:
