@@ -1,4 +1,4 @@
-//import './nu-cookie-banner.scss'
+import './nu-cookie-banner.scss'
 
 // require js-cookie
 // https://github.com/js-cookie/js-cookie

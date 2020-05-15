@@ -1,15 +1,15 @@
 {
   "name": "nu-cookie-banner",
-  "version": "4.0.1",
+  "version": "5.0.0",
   "description": "nulab cookie banner package",
-  "main": "src/nuCookieBanner.js",
+  "main": "dist/nuCookieBanner.js",
   "repository": "git@github.com:nulab/nu-cookie-banner.git",
   "author": "davicho <david@nulab.com>",
   "license": "MIT",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack --mode development",
-    "build": "cross-env NODE_ENV=production webpack --mode production",
-    "start": "webpack-dev-server --mode development"
+    "build": "webpack --config config/webpack.prod.config.js",
+    "start": "webpack-dev-server --open --config config/webpack.dev.config.js"
   },
   "dependencies": {
     "js-cookie": "^2.2.1"
@@ -23,14 +23,14 @@
     "css-loader": "^3.3.0",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.14.1",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.1",
-    "uglifyjs-webpack-plugin": "^2.2.0",
+    "terser-webpack-plugin": "^3.0.1",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.9.0",
+    "webpack-dev-server": "3.11.0",
     "webpack-merge": "^4.2.2"
   }
 }
