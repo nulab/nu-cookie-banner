@@ -4,14 +4,44 @@ This package will add a fixed cookie consent banner (html box) at the bottom of 
 
 ## Getting Started
 
-Install this package and remove old/existing cookie prompts on the web site (if they exist)
+Remove old/existing hard-coded cookie prompts on the web site (if they exist)
 
 ### Installing
+Two options:
+
+#### Up-to-date environments
 ```
 $ yarn add nu-cookie-banner
 ```
 
+#### UMD for older incompatible environments
+```
+<link rel="stylesheet" href="http://unpkg.com/nu-cookie-banner@[version]/dist/nu-cookie-banner.css">
+<script type="text/javascript" src="http://unpkg.com/nu-cookie-banner@[version]/dist/nuCookieBanner.js"></script>
+```
+
+---
+
 ### Configuring
+
+#### Import the package in your .js file
+
+```
+import { renderNuCookieBanner } from 'nu-cookie-banner'
+
+renderNuCookieBanner('company', 'lang');
+```
+
+OR 
+
+#### Require the package in your .js file
+```
+let nuCookieBannerReq = require('nu-cookie-banner')
+
+nuCookieBannerReq.renderNuCookieBanner('company', 'lang')
+```
+
+---
 
 #### Include styling
 
@@ -25,24 +55,3 @@ use build css
 ```
 nu-cookie-banner/dist/nu-cookie-banner.css';
 ```
-
-#### Import the package in your .js file
-
-```
-import { renderNuCookieBanner } from 'nu-cookie-banner'
-```
-```
-renderNuCookieBanner('company', 'lang');
-```
-
-OR 
-
-#### Require the package in your .js file
-```
-let nuCookieBannerReq = require('nu-cookie-banner')
-```
-```
-nuCookieBannerReq.renderNuCookieBanner('company', 'lang')
-```
-
-## If all else fails due to local incompatible environments/builds use the `dist/nuCookieBanner.js` and `dist/nu-cookie-banner.css` builds instead (for example: `dist/sample-script.html`).
