@@ -7,7 +7,7 @@ export function getCookie() {
 
 // Set cookie `cookiePolicy`
 export function setCookie() {
-  Cookies.set('cookiePolicy', 'agree', { expires: 90 })
+  Cookies.set('cookiePolicy', 'agree', { expires: 90, sameSite: 'none', secure: true })
 }
 
 // Check for a cookie called cookiePolicy (T/F)
