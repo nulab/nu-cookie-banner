@@ -2,6 +2,10 @@
 
 This package will add a fixed cookie consent banner (html box) at the bottom of the web site to meet GDPR law requirements. The purpose is to streamline the look/feel and behavior across all Nulab sites. The outcome if for the user to accept our site's cookie usage.
 
+## DEPRECATED
+
+Archiving project in lieu of OneTrust cookie banner.
+
 ## Getting Started
 
 Remove old/existing hard-coded cookie prompts on the web site (if they exist)
